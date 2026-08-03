@@ -1,0 +1,13 @@
+{
+  "name": "AR",
+  "version": "1.0.0",
+  "description": "Plataforma de Inteligencia Artificial - Randal IA",
+  "main": "Home.js",
+  "type": "module",
+  "scripts": {
+    "start": "node Home.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
