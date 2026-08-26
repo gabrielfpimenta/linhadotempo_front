@@ -1,13 +1,24 @@
 {
-  "name": "AR",
+  "name": "ar-project",
   "version": "1.0.0",
-  "description": "Plataforma de Inteligencia Artificial - Randal IA",
-  "main": "Home.js",
   "type": "module",
+  "main": "home.js",
   "scripts": {
-    "start": "node Home.js"
+    "start": "node home.js"
   },
   "dependencies": {
-    "express": "^4.19.2"
-  }
+    "@google/genai": "^2.17.1",
+    "express": "^4.22.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielfpimenta/linhadotempo_front.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielfpimenta/linhadotempo_front/issues"
+  },
+  "homepage": "https://github.com/gabrielfpimenta/linhadotempo_front#readme"
 }

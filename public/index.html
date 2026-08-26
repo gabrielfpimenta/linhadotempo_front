@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randal AR Experience — Muito Além de um Cartão</title>
+    
+    <!-- Meta Tags para SEO e Compartilhamento -->
+    <meta name="description" content="Uma experiência em Realidade Aumentada e Inteligência Artificial da Secretaria de Inovação e Tecnologia de Barueri.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Randal AR Experience — Muito Além de um Cartão">
+    <meta property="og:description" content="Conectando Realidade Aumentada, avatares 3D e IA em uma experiência imersiva.">
+    <meta property="og:image" content="img/qrcode.png">
+
+    <!-- Fontes e Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Canvas 3D de Fundo -->
+    <canvas id="canvas-bg"></canvas>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="nav-logo">
+          <span style="font-weight: 800; font-size: 1.1rem; color: #fff; letter-spacing: 1px;"></span>
+        <div class="nav-menu">
+            <a href="#experiencia">A Experiência</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#funcionalidades">Funcionalidades</a>
+            <a href="#recursos">Recursos</a>
+            <a href="#ia">Randal IA</a>
+            <a href="https://mywebar.com" target="_blank" class="nav-btn">Acessar RA</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <span class="badge-tag">✨ Realidade Aumentada & Inovação</span>
+            <h1>RANDAL AR EXPERIENCE</h1>
+            <p class="hero-subtitle">Muito além de um cartão. Uma experiência em Realidade Aumentada.</p>
+            <p class="hero-description">
+                Uma nova forma de apresentar identidade profissional, conectando Realidade Aumentada, conteúdo multimídia, interatividade e Inteligência Artificial em uma única experiência imersiva.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://mywebar.com" target="_blank" class="btn btn-primary">EXPERIMENTAR AGORA</a>
+                <a href="#como-funciona" class="btn btn-secondary">VER COMO FUNCIONA</a>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="card-3d-wrapper">
+                <div class="card-mockup">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <h3>PREFEITURA DE BARUERI</h3>
+                        <p>SECRETARIA DE INOVAÇÃO E TECNOLOGIA</p>
+                        <a href="https://mywebar.com" target="_blank" class="ar-badge-preview">📱 Aponte e Ative a RA</a>
+                        <div class="card-qr-container">
+                            <img src="img/qrcode.png" alt="QR Code Randal AR Experience" class="card-qr-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de Demonstração em Vídeo -->
+    <section id="experiencia" class="section demo-section">
+        <div class="section-header">
+            <h2>Veja a Randal AR Experience Ganhar Vida</h2>
+            <p>O cartão físico é apenas a porta de entrada. A verdadeira experiência acontece quando a tecnologia se sobrepõe ao mundo real.</p>
+        </div>
+        <div class="demo-container">
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/4YIvidIl76k" 
+                    title="Demonstração Randal AR Experience" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="section about-ar">
+        <div class="container-grid">
+            <div class="about-text">
+                <h2>Quando um cartão deixa de ser apenas um cartão</h2>
+                <p>A Randal AR Experience transforma um cartão de visitas tradicional em uma porta de entrada interativa. A partir da Realidade Aumentada, o usuário acessa avatares, conteúdos em vídeo e soluções digitais que ampliam a apresentação profissional para além do papel.</p>
+            </div>
+            <div class="about-highlight-card">
+                <div class="highlight-icon">🚀</div>
+                <h3>O Cartão é a Porta</h3>
+                <p>A experiência interativa acontece instantaneamente na tela do seu dispositivo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="section steps-section">
+        <div class="section-header">
+            <h2>Como Funciona em 3 Passos</h2>
+            <p>Simples, rápido e totalmente imersivo.</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <span class="step-number">01</span>
+                <h3>APONTE OU ACESSE</h3>
+                <p>Aponte a câmera do seu celular para o QR Code ou acesse diretamente pelos botões do site.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">02</span>
+                <h3>VEJA GANHAR VIDA</h3>
+                <p>A experiência em Realidade Aumentada carrega e projeta conteúdo digital dinâmico no mundo real.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">03</span>
+                <h3>EXPLORE E INTERAJA</h3>
+                <p>Conheça o avatar 3D, assista aos vídeos institucionais e converse com a Randal IA.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demonstração das Funcionalidades Interativas (Gmail, Telefone, Endereço) -->
+    <section id="funcionalidades" class="section features-grid-section">
+        <div class="section-header">
+            <span class="badge-tag">📱 Ações Rápidas na RA</span>
+            <h2>Funcionalidades ao Alcance de um Toque</h2>
+            <p>Veja como o cartão ganha vida com botões interativos direto na tela.</p>
+        </div>
+
+        <div class="features-container">
+            <!-- Card 1: E-mail -->
+            <div class="feature-card">
+                <div class="feature-image-wrapper">
+                    <img src="img/gmail.jpg" alt="Ação de Envio de E-mail para Jonatas Randal" class="feature-img">
+                </div>
+                <div class="feature-content">
+                    <h3>Envio de E-mail Rápido</h3>
+                    <p>Ao tocar no ícone de envelope, seu aplicativo de e-mail abre pré-configurado para enviar mensagens direto ao Secretário.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Telefone -->
+            <div class="feature-card">
+                <div class="feature-image-wrapper">
+                    <img src="img/tele.jpg" alt="Ação de Chamada Telefônica Direta" class="feature-img">
+                </div>
+                <div class="feature-content">
+                    <h3>Ligação Direta</h3>
+                    <p>Ao tocar no ícone de telefone, o discador do smartphone abre imediatamente pronto para fazer a chamada.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Endereço -->
+            <div class="feature-card">
+                <div class="feature-image-wrapper">
+                    <img src="img/rua.jpg" alt="Navegação para o Endereço da Secretaria" class="feature-img">
+                </div>
+                <div class="feature-content">
+                    <h3>Navegação para o Endereço</h3>
+                    <p>Ao clicar no ícone de localização, o aplicativo aciona a rota direto para a Rua Campos Sales, 222.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos Gerais -->
+    <section id="recursos" class="section features-section">
+        <div class="section-header">
+            <h2>O Que Existe Dentro da Experiência</h2>
+            <p>Recursos avançados integrados para máxima interatividade.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧊</div>
+                <h3>Realidade Aumentada</h3>
+                <p>Elemento central com projeção digital sobreposta ao ambiente físico.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👤</div>
+                <h3>Identidade Profissional</h3>
+                <p>Apresentação executiva dinâmica, moderna e sempre atualizada.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎭</div>
+                <h3>Avatar Digital</h3>
+                <p>Presença virtual interativa para recepção e apresentação do projeto.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎬</div>
+                <h3>Conteúdo em Vídeo</h3>
+                <p>Vídeos institucionais da Secretaria de Inovação e Tecnologia de Barueri.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔗</div>
+                <h3>Interatividade</h3>
+                <p>Atalhos rápidos para redes sociais, contatos e materiais digitais.</p>
+            </div>
+            <div class="feature-card ai-feature">
+                <div class="feature-icon">🤖</div>
+                <h3>Randal IA</h3>
+                <p>Agente de Inteligência Artificial integrado para atendimento e respostas em tempo real.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção IA -->
+    <section id="ia" class="section ai-highlight-section">
+        <div class="ai-box">
+            <span class="badge-tag">Inteligência Artificial</span>
+            <h2>A experiência continua com a Randal IA</h2>
+            <p>Conecte-se com a Inteligência Artificial criada para responder perguntas, orientar projetos e expandir o engajamento digital.</p>
+            <a href="https://chatgpt.com/g/g-68efe5e9fc208191abe6813a32126bc1-randal-ia-inteligencia-artificial" target="_blank" class="btn btn-primary btn-ai-chat">CONVERSAR COM RANDAL IA</a>
+        </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section class="section qr-section">
+        <div class="section-header">
+            <h2>Experimente Agora Mesmo</h2>
+            <p>Aponte a câmera do seu celular para o QR Code abaixo para iniciar a experiência.</p>
+        </div>
+        <div class="qr-container-box">
+            <div class="qr-display">
+                <div class="qr-code-placeholder">
+                    <img src="img/qrcode.png" alt="QR Code Randal AR Experience" class="qr-code-img">
+                </div>
+                <p>Escaneie com a câmera do celular.</p>
+            </div>
+            <div class="direct-access-action">
+                <h3>Acesso Direto</h3>
+                <p>Está navegando pelo computador ou prefere abrir direto no navegador?</p>
+                <a href="https://mywebar.com" target="_blank" class="btn btn-primary btn-large">ABRIR EXPERIÊNCIA AGORA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Inovação Barueri</strong> • Secretaria de Inovação e Tecnologia</p>
+            <p class="footer-sub">Randal AR Experience — Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
