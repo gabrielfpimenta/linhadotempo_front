@@ -11,15 +11,18 @@
     --glass-border: rgba(255, 255, 255, 0.08);
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     font-family: 'Inter', sans-serif;
@@ -29,6 +32,7 @@ body {
     position: relative;
     min-height: 100vh;
 }
+
 
 /* ==========================================================================
    Canvas 3D de Fundo
@@ -43,14 +47,16 @@ body {
     pointer-events: none !important;
 }
 
+
 /* Camada de conteúdo por cima do 3D */
-.navbar, 
-.hero-section, 
-.section, 
+.navbar,
+.hero-section,
+.section,
 .footer {
     position: relative;
     z-index: 1;
 }
+
 
 /* ==========================================================================
    Navegação (Navbar)
@@ -73,9 +79,11 @@ body {
     transition: transform 0.3s ease-in-out !important;
 }
 
+
 .navbar.navbar-hidden {
     transform: translateY(-100%) !important;
 }
+
 
 .logo-img {
     height: 48px;
@@ -83,11 +91,13 @@ body {
     object-fit: contain;
 }
 
+
 .nav-menu {
     display: flex;
     align-items: center;
     gap: 25px;
 }
+
 
 .nav-menu a {
     color: var(--text-muted);
@@ -97,9 +107,11 @@ body {
     transition: color 0.2s;
 }
 
+
 .nav-menu a:hover {
     color: var(--primary-cyan);
 }
+
 
 .nav-btn {
     background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
@@ -111,14 +123,49 @@ body {
     transition: transform 0.2s, box-shadow 0.2s !important;
 }
 
+
 .nav-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 25px rgba(0, 210, 255, 0.5);
 }
 
+
 /* ==========================================================================
    Hero Section
    ========================================================================== */
+   /* Container responsivo 16:9 para o YouTube */
+.hero-video-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+/* Empurra o vídeo um pouco para baixo sem perder o topo da página */
+.hero-video-section {
+    margin-top: 100px !important; /* Ajuste este valor se quiser mais alto ou mais baixo */
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Mantém a proporção 16:9 perfeita */
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.15);
+}
+
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 .hero-section {
     min-height: 100vh;
     padding: 120px 8% 60px;
@@ -128,9 +175,11 @@ body {
     gap: 40px;
 }
 
+
 .hero-content {
     max-width: 600px;
 }
+
 
 .badge-tag {
     display: inline-block;
@@ -144,6 +193,7 @@ body {
     margin-bottom: 20px;
 }
 
+
 .hero-content h1 {
     font-size: 3rem;
     font-weight: 800;
@@ -154,12 +204,14 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--primary-cyan);
     font-weight: 600;
     margin-bottom: 15px;
 }
+
 
 .hero-description {
     color: var(--text-muted);
@@ -168,10 +220,12 @@ body {
     margin-bottom: 30px;
 }
 
+
 .hero-buttons {
     display: flex;
     gap: 15px;
 }
+
 
 .btn {
     padding: 14px 28px;
@@ -185,16 +239,19 @@ body {
     cursor: pointer;
 }
 
+
 .btn-primary {
     background: linear-gradient(90deg, #00d2ff, #0088ff);
     color: #000;
     box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
 }
 
+
 .btn-primary:hover {
     box-shadow: 0 0 30px rgba(0, 210, 255, 0.7);
     transform: translateY(-2px);
 }
+
 
 .btn-secondary {
     background: rgba(255, 255, 255, 0.05);
@@ -202,10 +259,12 @@ body {
     color: var(--text-white);
 }
 
+
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
+
 
 /* Cartão 3D Mockup */
 .hero-visual {
@@ -213,6 +272,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 
 /* Redução de Tamanho do Cartão 3D */
 .card-3d-wrapper {
@@ -238,6 +298,7 @@ body {
     will-change: transform;
 }
 
+
 .card-inner h3 {
     font-size: 1.1rem;
     font-weight: 800;
@@ -245,12 +306,14 @@ body {
     margin-bottom: 5px;
 }
 
+
 .card-inner p {
     font-size: 0.75rem;
     color: var(--text-muted);
     letter-spacing: 1px;
     margin-bottom: 25px;
 }
+
 
 .ar-badge-preview {
     display: inline-block;
@@ -264,6 +327,7 @@ body {
     margin-bottom: 25px;
 }
 
+
 .card-qr-container {
     background: #ffffff;
     padding: 12px;
@@ -273,11 +337,13 @@ body {
     margin: 0 auto;
 }
 
+
 .card-qr-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 
 /* ==========================================================================
    Seções de Conteúdo
@@ -286,11 +352,13 @@ body {
     padding: 80px 8%;
 }
 
+
 .section-header {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 50px;
 }
+
 
 .section-header h2 {
     font-size: 2.2rem;
@@ -298,10 +366,12 @@ body {
     margin-bottom: 15px;
 }
 
+
 .section-header p {
     color: var(--text-muted);
     font-size: 1rem;
 }
+
 
 /* Container do Vídeo 16:9 */
 .demo-container {
@@ -314,6 +384,7 @@ body {
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
+
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
@@ -321,6 +392,7 @@ body {
     overflow: hidden;
     border-radius: 12px;
 }
+
 
 .video-wrapper iframe {
     position: absolute;
@@ -330,6 +402,7 @@ body {
     height: 100%;
 }
 
+
 /* Grids & Cards */
 .container-grid {
     display: grid;
@@ -337,6 +410,7 @@ body {
     gap: 40px;
     align-items: center;
 }
+
 
 .about-highlight-card {
     background: var(--glass-bg);
@@ -346,19 +420,22 @@ body {
     text-align: center;
 }
 
+
 .highlight-icon {
     font-size: 3rem;
     margin-bottom: 15px;
 }
 
-.steps-grid, 
+
+.steps-grid,
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
-.step-card, 
+
+.step-card,
 .feature-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
@@ -367,11 +444,13 @@ body {
     transition: transform 0.2s, border-color 0.2s;
 }
 
-.step-card:hover, 
+
+.step-card:hover,
 .feature-card:hover {
     transform: translateY(-5px);
     border-color: rgba(0, 210, 255, 0.4);
 }
+
 
 .step-number {
     font-size: 2rem;
@@ -381,10 +460,12 @@ body {
     margin-bottom: 15px;
 }
 
+
 .feature-icon {
     font-size: 2rem;
     margin-bottom: 15px;
 }
+
 
 /* Caixa de IA */
 .ai-box {
@@ -397,15 +478,18 @@ body {
     margin: 0 auto;
 }
 
+
 .ai-box h2 {
     font-size: 2rem;
     margin: 15px 0;
 }
 
+
 .ai-box p {
     color: var(--text-muted);
     margin-bottom: 25px;
 }
+
 
 /* Caixa de QR Code */
 .qr-container-box {
@@ -421,9 +505,11 @@ body {
     margin: 0 auto;
 }
 
+
 .qr-display {
     text-align: center;
 }
+
 
 .qr-code-placeholder {
     background: #fff;
@@ -434,11 +520,13 @@ body {
     margin: 0 auto 15px;
 }
 
+
 .qr-code-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 
 /* Rodapé */
 .footer {
@@ -449,12 +537,34 @@ body {
     font-size: 0.9rem;
 }
 
+
 .footer-sub {
     font-size: 0.8rem;
     margin-top: 5px;
     opacity: 0.7;
 }
+/* Garante espaço seguro entre a navbar e o primeiro vídeo no PC */
+body {
+    padding-top: 80px !important; /* Cria um respiro geral para que nada cole no topo fixo */
+}
 
+.hero-video-section {
+    max-width: 900px !important;
+    margin: 40px auto 20px auto !important;
+    padding: 20px 20px 0 20px !important;
+}
+
+.hero-video-section .video-container {
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+}
+
+.hero-video-section .video-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 12px !important;
+}
 /* ==========================================================================
    Responsividade (Telas Menores / Mobile)
    ========================================================================== */
@@ -464,18 +574,22 @@ body {
         justify-content: space-between !important;
     }
 
+
     .logo-img {
         height: 36px !important;
     }
+
 
     .nav-menu a:not(.nav-btn) {
         display: none !important;
     }
 
+
     .nav-btn {
         padding: 8px 14px !important;
         font-size: 0.8rem !important;
     }
+
 
     .hero-section {
         flex-direction: column !important;
@@ -484,21 +598,25 @@ body {
         text-align: left !important;
     }
 
+
     .hero-content {
         width: 100% !important;
         text-align: left !important;
     }
+
 
     .hero-content h1 {
         font-size: 2.2rem !important;
         text-align: left !important;
     }
 
-    .hero-subtitle, 
+
+    .hero-subtitle,
     .hero-description {
         text-align: left !important;
         font-size: 0.95rem !important;
     }
+
 
     .hero-buttons {
         flex-direction: column !important;
@@ -506,23 +624,27 @@ body {
         align-items: flex-start !important;
     }
 
+
     .hero-buttons .btn {
         width: 100% !important;
         max-width: 320px !important;
         padding: 12px 18px !important;
     }
 
+
     .hero-visual {
         width: 100%;
         margin-top: 30px;
     }
+
 
     .card-3d-wrapper {
         width: 290px;
         height: 420px;
     }
 
-    .container-grid, 
+
+    .container-grid,
     .qr-container-box {
         grid-template-columns: 1fr;
         flex-direction: column;
@@ -535,16 +657,19 @@ body {
     height: 190px !important; /* Tamanho reduzido para um visual mais discreto */
 }
 
+
 .features-grid-section .feature-img {
     object-fit: cover !important;
     object-position: center;
 }
+
 
 .section-header h2 {
     font-size: 2rem;
     font-weight: 800;
     color: #ffffff;
 }
+
 
 .features-container {
     display: grid;
@@ -553,6 +678,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 .feature-card {
     background: rgba(15, 23, 42, 0.7);
@@ -565,11 +691,13 @@ body {
     flex-direction: column;
 }
 
+
 .feature-card:hover {
     transform: translateY(-6px);
     border-color: rgba(0, 198, 255, 0.6);
     box-shadow: 0 12px 30px rgba(0, 198, 255, 0.15), 0 0 20px rgba(112, 0, 255, 0.2);
 }
+
 
 .feature-image-wrapper {
     width: 100%;
@@ -578,6 +706,7 @@ body {
     background: #000000;
 }
 
+
 .feature-image-wrapper img {
     width: 100%;
     height: 100%;
@@ -585,9 +714,11 @@ body {
     transition: transform 0.4s ease;
 }
 
+
 .feature-card:hover .feature-image-wrapper img {
     transform: scale(1.05);
 }
+
 
 .feature-content {
     padding: 24px;
@@ -598,17 +729,20 @@ body {
     flex-grow: 1;
 }
 
+
 .feature-content h3 {
     font-size: 1.15rem;
     font-weight: 700;
     color: #ffffff;
 }
 
+
 .feature-content p {
     font-size: 0.88rem;
     color: var(--text-muted);
     line-height: 1.6;
 }
+
 
 @media (max-width: 768px) {
     .features-grid-section {
@@ -617,5 +751,466 @@ body {
     .section-header h2 {
         font-size: 1.6rem;
     }
+    /* Trava de tamanho para a imagem do ícone */
+.highlight-icon img {
+    width: 72px !important;
+    height: 72px !important;
+    max-width: 72px !important;
+    max-height: 72px !important;
+    object-fit: contain !important;
+}
+/* Correção do Alinhamento do Menu e Conteúdo */
+header, nav, .navbar {
+    width: 100% !important;
+    max-width: 1250px !important;
+    margin: 0 auto !important;
+    padding: 15px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+}
+/* Remove linhas verticais e ajusta a moldura do vídeo */
+.hero-video-section {
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 30px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+
+/* Remove linhas/bordas extras que possam estar vazando nas pontas */
+.hero-video-section::before,
+.hero-video-section::after {
+    display: none !important;
+}
+
+
+/* Moldura limpa e centralizada para o YouTube */
+.video-container {
+    position: relative !important;
+    padding-bottom: 56.25% !important; /* Mantém proporção 16:9 */
+    height: 0 !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.15) !important;
+    overflow: hidden !important;
+    background: #000 !important;
+}
+/* Impede que o site "vaze" para os lados em telas menores */
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* Regras de centralização e alinhamento para celulares */
+@media (max-width: 768px) {
+    /* Ajusta o container principal para caber 100% na tela */
+    header,
+    section,
+    .hero,
+    .hero-container,
+    .main-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+    }
+
+
+    /* Centraliza a tag/badge superior e ajusta os textos */
+    .hero h1,
+    .hero p,
+    .badge,
+    .tag {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+
+    /* Empilha e centraliza os botões de ação */
+    .hero-buttons,
+    .cta-container,
+    .buttons-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin: 20px auto 0 auto !important;
+    }
+
+
+    .hero-buttons a,
+    .hero-buttons button,
+    .cta-container a,
+    .cta-container button {
+        width: 100% !important;
+        max-width: 320px !important;
+        box-sizing: border-box !important;
+    }
+}
+/* Permite que a navbar suma ao rolar a página */
+header, nav, .navbar {
+    position: absolute !important; /* Rola para fora da tela junto com o conteúdo */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+/* Restaura o suporte caso utilize classe de ocultação (.hidden ou .nav-hidden) via JavaScript */
+header.hidden,
+nav.hidden,
+.navbar.hidden,
+.nav-hidden {
+    display: none !important;
+    transform: translateY(-100%) !important;
+    opacity: 0 !important;
+}
+/* Layout em 3 colunas lado a lado (igual ao modelo "Como Funciona") */
+.steps-grid,
+.steps-container,
+.cards-grid,
+.features-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Força 3 colunas iguais */
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+
+/* Se a seção tiver apenas 2 cards (como a de Realidade Aumentada) */
+.features-container-2,
+.two-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Força 2 colunas iguais */
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+
+/* Evita que o conteúdo do card force a quebra de linha */
+.steps-grid > div,
+.steps-container > div,
+.cards-grid > div,
+.features-grid > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+
+/* No celular, volta a empilhar em 1 coluna para caber na tela */
+@media (max-width: 768px) {
+    .steps-grid,
+    .steps-container,
+    .cards-grid,
+    .features-grid,
+    .features-container-2,
+    .two-cards {
+        grid-template-columns: 1fr !important;
+    }
+}
+/* Correção de sobreposição para telas de celular */
+@media (max-width: 768px) {
+    /* Força todos os containers principais a empilharem os itens em ordem */
+    .hero,
+    .hero-container,
+    .main-content,
+    section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 16px !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+
+
+
+}
+/* ==========================================================================
+   Responsividade Mobile Completa e Otimizada
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Reset estrutural para garantir fluxo vertical limpo */
+    html, body {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    /* 2. Força todos os containers principais a empilharem os itens em coluna */
+    .hero,
+    .hero-section,
+    .hero-container,
+    section,
+    .section,
+    .features-container,
+    .cards-container,
+    .steps-grid,
+    .features-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box !important;
+        height: auto !important;
+        min-height: auto !important;
+        position: relative !important;
+        transform: none !important;
+    }
+
+    /* 3. Remove posicionamentos absolutos que causam sobreposição de textos */
+    .hero *,
+    .hero-section *,
+    section *,
+    .hero-content *,
+    .hero-visual * {
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* 4. Ajuste tipográfico proporcional para mobile */
+    h1, .hero-content h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+        margin-bottom: 12px !important;
+    }
+
+    h2, .section-header h2 {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+    }
+
+    p, .hero-content p, .hero-description {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+    }
+
+    /* 5. Alinhamento e largura total para os cards e caixas */
+    .feature-card,
+    .step-card,
+    .card-mockup,
+    .ai-box,
+    .qr-container-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 16px !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 6. Organização dos botões em coluna centralizada */
+    .hero-buttons,
+    .cta-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        align-items: center !important;
+        margin-top: 20px !important;
+    }
+
+    .btn,
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+
+    /* 7. Isolamento correto para os containers de vídeo (Shorts e Padrão) */
+    .video-container-shorts {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        padding-bottom: 177.78% !important;
+        height: 0 !important;
+        margin: 20px auto !important;
+    }
+
+    .video-container {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-bottom: 56.25% !important;
+        height: 0 !important;
+        margin: 20px auto !important;
+    }
+
+    .video-container-shorts iframe,
+    .video-container iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+/* ==========================================================================
+   Correção Definitiva Mobile (Vídeos, Topo e QR Code)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Corrige o topo: faz a barra de navegação subir junto com o scroll e dá respiro ao vídeo */
+    .navbar {
+        position: absolute !important;
+    }
+
+    /* Restaura o primeiro vídeo (shorts) para o seu lugar correto com espaçamento adequado */
+    .hero-video-section,
+    .hero-visual,
+    .video-container-shorts {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 30px auto 20px auto !important; /* Dá o mini espaço necessário para não colar no topo */
+        display: block !important;
+        position: relative !important;
+    }
+
+    .video-container-shorts iframe {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        border-radius: 12px !important;
+    }
+
+    /* 2. Trava o tamanho do Card 3D e do segundo vídeo para caber na tela do celular */
+    .video-container,
+    .video-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .video-container iframe {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 12px !important;
+    }
+
+    .card-3d-wrapper {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    .card-mockup {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 15px !important;
+        margin: 0 auto !important;
+    }
+
+    /* 2.1. Corrige o tamanho das imagens grandes (ex: galáxia) sem distorcer */
+    section img:not([src*="qr"]):not(.logo-img):not(iframe),
+    .illustration-img {
+        width: 50% !important;
+        max-width: 90px !important;
+        height: auto !important;
+        margin: 10px auto !important;
+        display: block !important;
+        object-fit: contain !important;
+    }
+
+    /* Aumenta bem o blueprint / imagem do cartão interativo no mobile */
+    .blueprint, 
+    img[src*="blueprint"], 
+    .card-blueprint,
+    img[src*="image_210aa2"],
+    .card-mockup img:not([src*="qr"]):not(.logo-img) {
+        width: 100% !important;
+        max-width: 280px !important; /* Tamanho bem maior e confortável */
+        height: auto !important;
+        max-height: none !important;
+        display: block !important;
+        margin: 15px auto !important;
+        object-fit: contain !important;
+    }
+       
+    /* 3. Força o QR Code a ficar pequeno e dentro do card */
+    .card-qr-container,
+    .qr-code-placeholder,
+    .qr-containerbox img,
+    .card-qr-img {
+        width: 110px !important;
+        height: 110px !important;
+        max-width: 110px !important;
+        max-height: 110px !important;
+        padding: 8px !important;
+        margin: 10px auto !important;
+    }
+
+    .card-qr-img,
+    .qr-code-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+    } 
+@media (max-width: 768px) {
+    /* Deixa o container do primeiro vídeo maior no celular */
+    .hero-video-section {
+        margin-top: 130px !important;
+        padding: 0 10px !important;
+    }
+
+    .hero-video-section .video-container,
+    .video-container-shorts {
+        width: 100% !important;
+        max-width: 100% !important;
+        aspect-ratio: 16 / 10 !important; /* Deixa o player mais expansivo e preenche melhor a tela */
+        height: auto !important;
+    }
+
+    .hero-video-section .video-container iframe,
+    .video-container-shorts iframe {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 12px !important;
+    }
+}
+}
 }
 }
